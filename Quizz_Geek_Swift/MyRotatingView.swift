@@ -68,34 +68,55 @@ class MyRotatingView: UIView {
     }
     
     func drawInFormat (format: CGSize) {
-        let border_head = CGFloat(40.0)
-        let border_bottom = CGFloat(format.height-50.0)
-        let border_side_left = CGFloat(format.width/12.0)
-        let border_side_right = CGFloat(format.width - format.width/12.0)
-        let centre = CGFloat(format.width/2)
+        let border_head : CGFloat
+        let border_bottom : CGFloat
+        let border_side_left : CGFloat
+        let border_side_right : CGFloat
+        let centre : CGFloat
+        let outlet_width : CGFloat
+        let outlet_height : CGFloat
+        let button_width : CGFloat
+        let button_height : CGFloat
+        let textView_height : CGFloat
         
-        let outlet_width = CGFloat(format.width - border_side_left*2)
-        let outlet_height = CGFloat(30.0)
-        let button_width = CGFloat(format.width/3 * 0.6)
-        let button_height = CGFloat(format.width/3 * 0.4)
-        let textView_height = CGFloat(format.height/4)
+        if (format.height <  540.0 ) { //landscape mode
+            border_head = CGFloat(10)
+            border_bottom = CGFloat(format.height - 60.0)
+            border_side_left = CGFloat(format.width/15.0)
+            border_side_right = CGFloat(format.width - border_side_left)
+            centre = CGFloat(format.width/2)
+            outlet_width = CGFloat(format.width - border_side_left*2)
+            outlet_height = CGFloat(30.0)
+            button_width = CGFloat(format.width/5 * 0.7)
+            button_height = CGFloat(format.width/5 * 0.5)
+            textView_height = CGFloat(format.height/6)
+            
+        } else { //big screen of portrait
+            border_head = CGFloat(40.0)
+            border_bottom = CGFloat(format.height-50.0)
+            border_side_left = CGFloat(format.width/12.0)
+            border_side_right = CGFloat(format.width - border_side_left)
+            centre = CGFloat(format.width/2)
+            outlet_width = CGFloat(format.width - border_side_left*2)
+            outlet_height = CGFloat(30.0)
+            button_width = CGFloat(format.width/3 * 0.6)
+            button_height = CGFloat(format.width/3 * 0.4)
+            textView_height = CGFloat(format.height/4)
+        }
         
         print("w %f", format.width)
         print("h %f", format.height)
         
-        buttonLeft.frame = CGRect(x: border_side_left, y: border_head, width: button_width, height: button_height)
-        buttonRight.frame = CGRect(x: border_side_right - button_width, y: border_head, width: button_width, height: button_height)
-        buttonGetAnswer.frame = CGRect(x: centre - button_width*1.5/2, y: border_head, width: button_width*1.5, height: button_height)
-        
-        labelQuestion.frame = CGRect(x: border_side_left, y: border_head + button_height, width: outlet_width, height: outlet_height)
-        textViewQuetion.frame = CGRect(x: border_side_left, y: border_head + 2*button_height, width: outlet_width, height: textView_height)
-        labelAnswer.frame = CGRect(x: border_side_left, y: border_head + 2*button_height + textView_height, width: outlet_width, height: outlet_height)
-        textViewAnswer.frame = CGRect(x: border_side_left, y: border_head + 3*button_height + textView_height, width: outlet_width, height: textView_height)
-        
-        labelAnswerSeen.frame = CGRect(x: border_side_left, y: border_bottom, width: button_width + 40, height: button_height)
+        buttonLeft.frame            = CGRect(x: border_side_left, y: border_head, width: button_width, height: button_height)
+        buttonRight.frame           = CGRect(x: border_side_right - button_width, y: border_head, width: button_width, height: button_height)
+        buttonGetAnswer.frame       = CGRect(x: centre - button_width*1.5/2, y: border_head, width: button_width*1.5, height: button_height)
+        labelQuestion.frame         = CGRect(x: border_side_left, y: border_head + button_height, width: outlet_width, height: outlet_height)
+        textViewQuetion.frame       = CGRect(x: border_side_left, y: border_head + button_height + outlet_height, width: outlet_width, height: textView_height)
+        labelAnswer.frame           = CGRect(x: border_side_left, y: border_head + button_height + outlet_height + textView_height, width: outlet_width, height: outlet_height)
+        textViewAnswer.frame        = CGRect(x: border_side_left, y: border_head + button_height + 2*outlet_height + textView_height, width: outlet_width, height: textView_height)
+        labelAnswerSeen.frame       = CGRect(x: border_side_left, y: border_bottom, width: button_width + 40, height: button_height)
         labelAnswerSeenNumber.frame = CGRect(x: border_side_left + 40 + button_width, y: border_bottom, width: button_width, height: button_height)
-        
-        labelChuckNorris.frame = CGRect(x: border_side_right - 2*button_width, y: border_bottom, width: button_width, height: button_height)
-        switchChuck.frame = CGRect(x: border_side_right - button_width, y: border_bottom, width: button_width, height: button_height)
+        labelChuckNorris.frame      = CGRect(x: border_side_right - 2*button_width, y: border_bottom, width: button_width, height: button_height)
+        switchChuck.frame           = CGRect(x: border_side_right - button_width, y: border_bottom, width: button_width, height: button_height)
     }
 }
