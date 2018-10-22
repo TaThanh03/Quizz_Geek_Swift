@@ -35,6 +35,7 @@ class MyRotatingView: UIView {
         
         labelQuestion.textAlignment = NSTextAlignment.center
         labelAnswer.textAlignment = NSTextAlignment.center
+        
         textViewQuetion.textAlignment = NSTextAlignment.center
         textViewAnswer.textAlignment = NSTextAlignment.center
         
@@ -114,9 +115,10 @@ class MyRotatingView: UIView {
         textViewQuetion.frame       = CGRect(x: border_side_left, y: border_head + button_height + outlet_height, width: outlet_width, height: textView_height)
         labelAnswer.frame           = CGRect(x: border_side_left, y: border_head + button_height + outlet_height + textView_height, width: outlet_width, height: outlet_height)
         textViewAnswer.frame        = CGRect(x: border_side_left, y: border_head + button_height + 2*outlet_height + textView_height, width: outlet_width, height: textView_height)
+        
         labelAnswerSeen.frame       = CGRect(x: border_side_left, y: border_bottom, width: button_width + 40, height: button_height)
         labelAnswerSeenNumber.frame = CGRect(x: border_side_left + 40 + button_width, y: border_bottom, width: button_width, height: button_height)
         labelChuckNorris.frame      = CGRect(x: border_side_right - 2*button_width, y: border_bottom, width: button_width, height: button_height)
-        switchChuck.frame           = CGRect(x: border_side_right - button_width, y: border_bottom, width: button_width, height: button_height)
+        switchChuck.frame           = CGRect(x: border_side_right - button_width, y: border_bottom + 8, width: button_width, height: button_height)
     }
 }
