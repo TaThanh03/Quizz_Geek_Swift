@@ -14,6 +14,7 @@
 		133B7B79217CDE5900FF2FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133B7B77217CDE5900FF2FC8 /* LaunchScreen.storyboard */; };
 		133B7B84217CDE5900FF2FC8 /* Quizz_Geek_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B7B83217CDE5900FF2FC8 /* Quizz_Geek_SwiftTests.swift */; };
 		133B7B8F217CDE5900FF2FC8 /* Quizz_Geek_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B7B8E217CDE5900FF2FC8 /* Quizz_Geek_SwiftUITests.swift */; };
+		133B7B9D217D29B500FF2FC8 /* MyRotatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B7B9C217D29B500FF2FC8 /* MyRotatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		133B7B8A217CDE5900FF2FC8 /* Quizz_Geek_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Quizz_Geek_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		133B7B8E217CDE5900FF2FC8 /* Quizz_Geek_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz_Geek_SwiftUITests.swift; sourceTree = "<group>"; };
 		133B7B90217CDE5900FF2FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133B7B9C217D29B500FF2FC8 /* MyRotatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRotatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				133B7B75217CDE5900FF2FC8 /* Assets.xcassets */,
 				133B7B77217CDE5900FF2FC8 /* LaunchScreen.storyboard */,
 				133B7B7A217CDE5900FF2FC8 /* Info.plist */,
+				133B7B9C217D29B500FF2FC8 /* MyRotatingView.swift */,
 			);
 			path = Quizz_Geek_Swift;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				133B7B71217CDE5800FF2FC8 /* ViewController.swift in Sources */,
+				133B7B9D217D29B500FF2FC8 /* MyRotatingView.swift in Sources */,
 				133B7B6F217CDE5800FF2FC8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
